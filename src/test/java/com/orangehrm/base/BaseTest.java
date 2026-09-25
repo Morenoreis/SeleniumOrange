@@ -1,4 +1,4 @@
-﻿package com.orangehrm.base;
+package com.orangehrm.base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
