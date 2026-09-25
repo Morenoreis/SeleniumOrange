@@ -113,7 +113,6 @@ This project follows the **Page Object Model (POM)** pattern:
 
 - The demo site resets data periodically
 - Tests run sequentially via TestNG XML suite
-- Project is evolving — next phase will include Playwright
 
 ---
 
