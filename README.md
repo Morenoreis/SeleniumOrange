@@ -1,3 +1,4 @@
+![CI](https://github.com/Morenoreis/SeleniumOrange/actions/workflows/ci.yml/badge.svg)
 # SeleniumOrange
 
 End-to-end test automation project using **Selenium WebDriver + Java + TestNG** on the [OrangeHRM](https://opensource-demo.orangehrmlive.com) demo website.
