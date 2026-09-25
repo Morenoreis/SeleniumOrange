@@ -1,4 +1,4 @@
-package com.orangehrm.base;
+﻿package com.orangehrm.base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -22,9 +22,20 @@ public class BaseTest {
 
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
         options.addArguments("--silent");
         options.addArguments("--log-level=3");
+
+        boolean isCI = System.getenv("CI") != null;
+        if (isCI) {
+            options.addArguments("--headless=new");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--window-size=1920,1080");
+        } else {
+            options.addArguments("--start-maximized");
+        }
+
         driver = new ChromeDriver(options);
         driver.get(BASE_URL + "/index.php/auth/login");
     }
